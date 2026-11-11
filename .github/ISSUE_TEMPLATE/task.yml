@@ -14,21 +14,25 @@ type: Task
 labels: []
 body:
   - type: textarea
-    id: description
+    id: summary
     attributes:
-      # GitHub rendert das Label als "### <label>" ins Issue, daher ist es die erste Überschrift
-      
-      description: |
-        - **Zusammenfassung:** Worum geht es, in zwei bis drei Sätzen? Was soll gemacht werden und warum?
-        - **Acceptance Criteria:** Wann ist das Ticket fertig? Jede Zeile mit Ja oder Nein prüfbar; wo nicht offensichtlich, den Prüfweg dazuschreiben.
-        - **Hinweise:** Optional. Betroffene Module, Abhängigkeiten, verwandte Issues, was nicht dazugehört.
-      value: |
-        ## Zusammenfassung
-
-        ## Acceptance Criteria
-        - [ ] 
-
-        ## Hinweise
-
+      label: Zusammenfassung
+      description: Worum geht es, in zwei bis drei Sätzen? Was soll gemacht werden und warum?
     validations:
       required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      description: Wann ist das Ticket fertig? Jede Zeile mit Ja oder Nein prüfbar; wo nicht offensichtlich, den Prüfweg dazuschreiben.
+      value: |
+        - [ ] 
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Hinweise
+      description: Optional. Betroffene Module, Abhängigkeiten, verwandte Issues, was nicht dazugehört.
+    validations:
+      required: false
