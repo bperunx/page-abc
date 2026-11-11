@@ -1,5 +1,5 @@
 name: Task
-description: Standard-Ticket mit Kurzzusammenfassung und Acceptance Criteria
+description: Standard-Ticket mit Zusammenfassung und Acceptance Criteria
 # Issue Type (Org-weit, genau einer pro Issue):
 #   Task    – konkretes Arbeitspaket
 #   Bug     – unerwartetes Fehlverhalten
@@ -16,20 +16,20 @@ body:
   - type: textarea
     id: description
     attributes:
-      label: Beschreibung
+      # GitHub rendert das Label als "### <label>" ins Issue, daher ist es die erste Überschrift
+      label: Zusammenfassung
       description: |
-        - **Kurzzusammenfassung:** Worum geht es, in zwei bis drei Sätzen? Was soll gemacht werden und warum?
+        - **Zusammenfassung:** Worum geht es, in zwei bis drei Sätzen? Was soll gemacht werden und warum?
         - **Acceptance Criteria:** Wann ist das Ticket fertig? Jede Zeile mit Ja oder Nein prüfbar; wo nicht offensichtlich, den Prüfweg dazuschreiben.
         - **Hinweise:** Optional. Betroffene Module, Abhängigkeiten, verwandte Issues, was nicht dazugehört.
       value: |
-        ## Kurzzusammenfassung
 
 
-        ## Acceptance Criteria
+        ### Acceptance Criteria
         - [ ]
         - [ ]
 
-        ## Hinweise
+        ### Hinweise
 
     validations:
       required: true
