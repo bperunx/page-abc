@@ -17,19 +17,18 @@ body:
     id: description
     attributes:
       # GitHub rendert das Label als "### <label>" ins Issue, daher ist es die erste Überschrift
-      label: Zusammenfassung
+      
       description: |
         - **Zusammenfassung:** Worum geht es, in zwei bis drei Sätzen? Was soll gemacht werden und warum?
         - **Acceptance Criteria:** Wann ist das Ticket fertig? Jede Zeile mit Ja oder Nein prüfbar; wo nicht offensichtlich, den Prüfweg dazuschreiben.
         - **Hinweise:** Optional. Betroffene Module, Abhängigkeiten, verwandte Issues, was nicht dazugehört.
       value: |
+        ## Zusammenfassung
 
+        ## Acceptance Criteria
+        - [ ] 
 
-        ### Acceptance Criteria
-        - [ ]
-        - [ ]
-
-        ### Hinweise
+        ## Hinweise
 
     validations:
       required: true
